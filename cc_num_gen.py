@@ -1,6 +1,17 @@
+# Author: William Dam
+# Date: 09-11-2020
+# Description: Random credit card number generation functions for Visa, MasterCard
+# and Amex.  For research and development purposes only, numbers generated have
+# valid prefixes and checksums, but will obviously not work through the credit card
+# interchange network.
 import random
 
 
+#######################################################################
+# Description: Helper function returns valid checksum for cc number
+# Arguments: String of credit card number without last digit
+# Returns: Checksum for credit card number arg, as a single int
+#######################################################################
 def check_sum_digit(number):
 
     card_digits = number
@@ -23,6 +34,13 @@ def check_sum_digit(number):
 
     return check_sum * 9 % 10
 
+
+#######################################################################
+# Description: Random Visa number generator
+# Arguments: None
+# Dependencies: check_sum_digit(number)
+# Returns: Random valid Visa number as int
+#######################################################################
 def random_visa():
 
     prefix = 4
@@ -33,6 +51,12 @@ def random_visa():
     return num
 
 
+#######################################################################
+# Description: Random MasterCard number generator
+# Arguments: None
+# Dependencies: check_sum_digit(number)
+# Returns: Random valid MasterCard number as int
+#######################################################################
 def random_mc():
 
     prefix_choice = random.randint(1, 2)
@@ -52,6 +76,12 @@ def random_mc():
     return num
 
 
+#######################################################################
+# Description: Random Amex number generator
+# Arguments: None
+# Dependencies: check_sum_digit(number)
+# Returns: Random valid Amex number as int
+#######################################################################
 def random_amex():
 
     prefix_choice = random.randint(1, 2)
