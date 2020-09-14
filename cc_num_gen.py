@@ -1,9 +1,9 @@
 # Author: William Dam
 # Date: 09-11-2020
-# Description: Random credit card number generation functions for Visa, MasterCard
-# and Amex.  For research and development purposes only, numbers generated have
-# valid prefixes and checksums, but will obviously not work through the credit card
-# interchange network.
+# Description: Random credit card number generation functions for Visa,
+# MasterCard and Amex.  For research and development purposes only,
+# numbers generated have valid prefixes and checksums, but will obviously
+# not work through the credit card interchange network.
 import random
 
 
